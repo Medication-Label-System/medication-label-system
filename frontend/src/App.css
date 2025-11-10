@@ -1,0 +1,451 @@
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Login Styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  width: 400px;
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+/* Main App Styles */
+.app-header {
+  background: #2c3e50;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+.main-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left-panel {
+  flex: 1;
+  min-width: 0;
+}
+
+.right-panel {
+  width: 400px;
+  min-width: 400px;
+}
+
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+/* Patient Search */
+.search-form .input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.search-form button:hover {
+  background: #2980b9;
+}
+
+.patient-info {
+  background: #d4edda;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #c3e6cb;
+}
+
+.patient-info h3 {
+  margin-top: 0;
+  color: #155724;
+}
+
+/* Medications */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.custom-instruction-toggle {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  border: 1px solid #e9ecef;
+}
+
+.custom-instruction-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.custom-instruction-toggle textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.medications-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.medication-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  border: 1px solid #ecf0f1;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+}
+
+.medication-item:hover {
+  background: #e9ecef;
+}
+
+.medication-info {
+  flex: 1;
+}
+
+.medication-info strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.medication-info p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.medication-info small {
+  color: #7f8c8d;
+  font-size: 12px;
+}
+
+.medication-item button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.medication-item button:hover:not(:disabled) {
+  background: #219a52;
+}
+
+.medication-item button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Basket */
+.empty-basket {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 20px;
+}
+
+.basket-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+}
+
+.basket-info {
+  flex: 1;
+}
+
+.basket-info strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.basket-info p {
+  margin: 0;
+  color: #555;
+  font-size: 12px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.basket-controls {
+  text-align: center;
+}
+
+.clear-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #c0392b;
+}
+
+/* Expiry date input in basket */
+.expiry-input {
+  margin-top: 8px;
+  padding: 5px;
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.expiry-input label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #555;
+}
+
+.expiry-input input {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+/* Adjust basket item for expiry date */
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+}
+
+.basket-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.basket-info strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.basket-info p {
+  margin: 0;
+  color: #555;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* Print Controls */
+.print-controls {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.print-controls .form-group {
+  margin-bottom: 15px;
+}
+
+.print-controls label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+.print-controls input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.print-btn {
+  background: #e67e22;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.print-btn:hover {
+  background: #d35400;
+}
+
+.print-summary {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #e9ecef;
+  font-size: 14px;
+}
+
+.print-summary p {
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .right-panel {
+    width: 100%;
+    min-width: auto;
+  }
+}
+

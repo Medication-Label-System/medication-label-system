@@ -1,0 +1,6 @@
+{
+  "runtime": {
+    "name": "nodejs",
+    "version": "18"
+  }
+}
