@@ -6,7 +6,7 @@ import './App.css';
 import pharmacyLogo from './assets/logo.png';
 
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-backend-app.cyclic.app'
+  ? '/.netlify/functions/api'  // Netlify Functions path
   : 'http://localhost:5000';
 
 function App() {

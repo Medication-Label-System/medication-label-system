@@ -1,0 +1,10 @@
+{
+  "name": "medication-label-system",
+  "version": "1.0.0",
+  "scripts": {
+    "build:functions": "cd backend && npm install"
+  },
+  "dependencies": {
+    "serverless-http": "^3.2.0"
+  }
+}
