@@ -6,7 +6,7 @@ import './App.css';
 import pharmacyLogo from './assets/logo.png';
 
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://medication-label-system.medication-label-system.deno.net'  // Your actual Deno URL
+  ? 'https://982f1e1a-2983-404d-a359-a517bdb8eff0-00-1tul3hqr1nf9g.picard.replit.dev'
   : 'http://localhost:5000';
 
 function App() {
