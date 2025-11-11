@@ -468,6 +468,9 @@ function App() {
       }
     });
 
+ const generatePrintPreview = () => {
+    // ... your existing code ...
+
     printWindow.document.write(`
       <!DOCTYPE html>
       <html>
@@ -487,8 +490,8 @@ function App() {
             padding: 0 !important;
             background: white;
             font-family: Arial, sans-serif;
-            width: 4cm;
-            height: 2.5cm;
+            width: 5cm !important;        /* CHANGED: 4cm → 5cm */
+            height: 3cm !important;        /* CHANGED: 2.5cm → 3cm */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -497,10 +500,10 @@ function App() {
           
           /* LABEL CONTAINER - EXACT SIZE */
           .label-container {
-            width: 4cm !important;
-            height: 2.5cm !important;
+            width: 5cm !important;         /* CHANGED: 4cm → 5cm */
+            height: 3cm !important;        /* CHANGED: 2.5cm → 3cm */
             border: 0.5px solid #000;
-            padding: 1mm;
+            padding: 1.2mm;                /* INCREASED: 1mm → 1.2mm (20% increase) */
             margin: 0 !important;
             page-break-after: always;
             display: flex;
@@ -516,13 +519,13 @@ function App() {
             height: 100%;
           }
           
-          /* HEADER SECTION */
+          /* HEADER SECTION - INCREASED BY 25% */
           .label-header {
-            height: 0.4cm;
+            height: 0.5cm;                 /* INCREASED: 0.4cm → 0.5cm */
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-bottom: 0.5mm;
+            padding-bottom: 0.6mm;         /* INCREASED: 0.5mm → 0.6mm */
             border-bottom: 0.5px solid #000;
           }
           
@@ -533,7 +536,7 @@ function App() {
           }
           
           .logo-image {
-            max-height: 0.3cm;
+            max-height: 0.38cm;            /* INCREASED: 0.3cm → 0.38cm */
             max-width: 70%;
             width: auto;
             object-fit: contain;
@@ -542,19 +545,19 @@ function App() {
           .patient-id {
             flex: 1;
             text-align: right;
-            font-size: 4pt;
+            font-size: 5pt;                /* INCREASED: 4pt → 5pt */
           }
           
-          /* PATIENT NAME */
+          /* PATIENT NAME - INCREASED BY 25% */
           .patient-name {
-            height: 0.25cm;
+            height: 0.31cm;                /* INCREASED: 0.25cm → 0.31cm */
             text-align: center;
-            margin: 0.3mm 0;
-            padding: 0.5mm 0;
+            margin: 0.36mm 0;              /* INCREASED: 0.3mm → 0.36mm */
+            padding: 0.6mm 0;              /* INCREASED: 0.5mm → 0.6mm */
             line-height: 1;
             overflow: hidden;
             border-bottom: 0.5px solid #000;
-            font-size: 5pt;
+            font-size: 6.25pt;             /* INCREASED: 5pt → 6.25pt */
           }
           
           .patient-name strong {
@@ -564,16 +567,16 @@ function App() {
             white-space: nowrap;
           }
           
-          /* DRUG NAME */
+          /* DRUG NAME - INCREASED BY 25% */
           .drug-name {
-            height: 0.25cm;
+            height: 0.31cm;                /* INCREASED: 0.25cm → 0.31cm */
             text-align: center;
-            margin: 0.1mm 0;
-            padding: 0.3mm 0;
+            margin: 0.12mm 0;              /* INCREASED: 0.1mm → 0.12mm */
+            padding: 0.36mm 0;             /* INCREASED: 0.3mm → 0.36mm */
             line-height: 1;
             overflow: hidden;
             border-bottom: 0.5px solid #000;
-            font-size: 5pt;
+            font-size: 6.25pt;             /* INCREASED: 5pt → 6.25pt */
           }
           
           .drug-name strong {
@@ -583,16 +586,16 @@ function App() {
             white-space: nowrap;
           }
           
-          /* INSTRUCTIONS */
+          /* INSTRUCTIONS - INCREASED BY 25% */
           .instructions {
             flex: 1;
-            min-height: 0.8cm;
-            margin: 0.1mm 0;
-            padding: 0.5mm;
+            min-height: 1cm;               /* INCREASED: 0.8cm → 1cm */
+            margin: 0.12mm 0;              /* INCREASED: 0.1mm → 0.12mm */
+            padding: 0.6mm;                /* INCREASED: 0.5mm → 0.6mm */
             line-height: 1.1;
             overflow: hidden;
             border-bottom: 0.5px solid #000;
-            font-size: 5pt;
+            font-size: 6.25pt;             /* INCREASED: 5pt → 6.25pt */
           }
           
           .instructions span {
@@ -605,14 +608,14 @@ function App() {
             direction: rtl;
           }
           
-          /* FOOTER */
+          /* FOOTER - INCREASED BY 25% */
           .label-footer {
-            height: 0.3cm;
-            font-size: 4pt;
+            height: 0.38cm;                /* INCREASED: 0.3cm → 0.38cm */
+            font-size: 5pt;                /* INCREASED: 4pt → 5pt */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding-top: 0.2mm;
+            padding-top: 0.24mm;           /* INCREASED: 0.2mm → 0.24mm */
           }
           
           .footer-line {
@@ -624,27 +627,27 @@ function App() {
             text-align: center;
           }
           
-          /* PRINT SETTINGS - CRITICAL FOR EXACT SIZE */
+          /* PRINT SETTINGS - UPDATED FOR 5cm × 3cm */
           @media print {
             /* REMOVE ALL BROWSER HEADERS/FOOTERS */
             @page {
               margin: 0 !important;
               padding: 0 !important;
-              size: 4cm 2.5cm !important;
+              size: 5cm 3cm !important;    /* CHANGED: 4cm 2.5cm → 5cm 3cm */
             }
             
             body {
               margin: 0 !important;
               padding: 0 !important;
-              width: 4cm !important;
-              height: 2.5cm !important;
+              width: 5cm !important;       /* CHANGED: 4cm → 5cm */
+              height: 3cm !important;      /* CHANGED: 2.5cm → 3cm */
             }
             
             .label-container {
-              width: 4cm !important;
-              height: 2.5cm !important;
+              width: 5cm !important;       /* CHANGED: 4cm → 5cm */
+              height: 3cm !important;      /* CHANGED: 2.5cm → 3cm */
               margin: 0 !important;
-              padding: 1mm !important;
+              padding: 1.2mm !important;   /* INCREASED: 1mm → 1.2mm */
               page-break-after: always;
               break-after: page;
             }
@@ -698,7 +701,7 @@ function App() {
       </html>
     `);
     printWindow.document.close();
-  };
+};
 
   // Print labels
   const printLabels = async () => {
