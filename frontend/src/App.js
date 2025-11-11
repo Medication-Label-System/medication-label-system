@@ -6,7 +6,7 @@ import './App.css';
 import pharmacyLogo from './assets/logo.png';
 
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '/.netlify/functions/api'  // Netlify Functions path
+  ? 'https://medication-label-system.medication-label-system.deno.net'  // Your actual Deno URL
   : 'http://localhost:5000';
 
 function App() {
